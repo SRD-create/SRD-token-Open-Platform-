@@ -1,0 +1,1313 @@
+{
+  "meta": {
+    "title": "Open Compute Platform"
+  },
+  "header": {
+    "brand": "Open Compute Platform",
+    "navAria": "Main navigation",
+    "home": "Home",
+    "console": "Console",
+    "models": "Model Hub",
+    "partners": "Partners",
+    "contact": "Contact Us",
+    "apiDocs": "Docs",
+    "announce": "News",
+    "login": "Sign in",
+    "unnamedUser": "Unnamed user",
+    "profileLoading": "Loading…",
+    "switchToEn": "Switch to English",
+    "switchToZh": "Switch to Chinese"
+  },
+  "announcementModal": {
+    "title": "Notice",
+    "closeAria": "Close",
+    "promo": "🔥 Limited-time offer — last 3 days! 🔥",
+    "serviceTitle": "🚀 Stable and dependable: our service commitment",
+    "statUptime": "Days without major incidents",
+    "statAvailability": "Service availability",
+    "statNodes": "Global edge nodes",
+    "bulletLoadBalance": "Smart load balancing: intelligent routing across regions for lower latency.",
+    "bulletConcurrency": "High-concurrency architecture: built for heavy traffic and smooth peaks.",
+    "updatesTitle": "✨ Recent updates",
+    "updatesModels": "Models: <m1>glm5.1 (full)</m1> (~1300B) is now on the platform—ideal for complex agents and production-grade orchestration. <m2>kimi-k2.6 (full)</m2> (1000B, trillion-parameter MoE) is also live for lightweight deployments that balance performance and cost. See the Model Hub for pricing and context limits.",
+    "updatesAsync": "Improved response bodies for asynchronous task submission payloads."
+  },
+  "home": {
+    "hero": {
+      "titleBefore": "Source Supply,",
+      "titleHighlight": "Direct To The Compute Layer",
+      "subtitle": "We Are A Core Supplier Of Large-Model Tokens. As An Upstream Source In The Chain, We Deliver Underlying Compute Directly To Individuals And Enterprises."
+    },
+    "cta": {
+      "getApiKey": "Get API Key",
+      "exploreModels": "Explore Models"
+    },
+    "stats": {
+      "tokensMonth": "Tokens / month",
+      "users": "Users",
+      "models": "Models",
+      "providers": "Providers"
+    },
+    "features": {
+      "selfBuilt": {
+        "title": "Self-Developed Foundation",
+        "desc": "End-to-end in-house core technology for efficient, stable Token output."
+      },
+      "hardcore": {
+        "title": "Hardcore Infrastructure",
+        "desc": "Proprietary compute and hardware clusters—latency tuned from the physical layer up."
+      },
+      "costPerf": {
+        "title": "Ultimate Value",
+        "desc": "Fewer middleman costs; more competitive Token supply for your workloads."
+      },
+      "learnMore": "Learn More"
+    },
+    "start": {
+      "title": "Get started in minutes",
+      "subtitle": "Follow these steps to connect quickly."
+    },
+    "steps": {
+      "1": {
+        "title": "WeChat sign-in",
+        "desc": "Authorize with WeChat—no extra email verification."
+      },
+      "2": {
+        "title": "Get your API key",
+        "desc": "Create a key in the console and call the API immediately."
+      },
+      "3": {
+        "title": "Build",
+        "desc": "Pick models, wire usage metrics, and ship LLM features to production."
+      }
+    },
+    "footer": {
+      "copyright": "© 2026 Nanjing Suruide Technology Co., Ltd. · AIToken Open Compute Platform"
+    }
+  },
+  "footer": {
+    "links": {
+      "status": "Status",
+      "announcement": "News",
+      "support": "Support",
+      "about": "About",
+      "partners": "Partners",
+      "enterprise": "Enterprise",
+      "careers": "Careers",
+      "pricing": "Pricing",
+      "privacyTerms": "Privacy & terms"
+    }
+  },
+  "login": {
+    "backHome": "← Back to home",
+    "brand": "Open Compute Platform",
+    "authorizing": "Authorizing…",
+    "wechatLogin": "Continue with WeChat",
+    "mockWechat": {
+      "nickname": "Demo user (mock WeChat)"
+    },
+    "toast": {
+      "wechatMockSignedIn": "Signed in with a local mock WeChat session (no backend). Set VITE_MOCK_WECHAT_LOGIN to false for real WeChat.",
+      "wechatUrlMissing": "We could not get the WeChat sign-in URL. Try again later or contact support.",
+      "wechatStartFail": "Could not start WeChat sign-in. Check your network and try again.",
+      "wechatSignedIn": "Signed in successfully",
+      "wechatPopupBlocked": "Couldn't open the sign-in window, so we'll navigate this tab to WeChat. Allow pop-ups for this site if you want to stay on the current page.",
+      "wechatRedirectOriginMismatch": "This site is {{current}}, but the WeChat redirect_uri host is {{expected}}. They must match origin or the auth window cannot return the token to this tab (the login modal will stay open). For local dev, point WeChat + your API redirect_uri to the same host you open in the browser (localhost vs production is a common mismatch), or open the app on the same domain as redirect_uri."
+    }
+  },
+  "models": {
+    "filterType": "Model type",
+    "filterVendor": "Provider",
+    "filtersExpand": "Show filters",
+    "filtersCollapse": "Hide filters",
+    "type": {
+      "all": "All",
+      "code": "Code",
+      "chat": "Chat",
+      "multi": "Multimodal",
+      "embed": "Embeddings",
+      "text": "Text"
+    },
+    "vendor": {
+      "all": "All providers",
+      "openai": "OpenAI",
+      "claude": "Claude",
+      "gemini": "Google Gemini",
+      "wenxin": "ERNIE",
+      "qwen": "Qwen",
+      "hunyuan": "Hunyuan",
+      "minimax": "MiniMax",
+      "zhipu": "Zhipu",
+      "moonshot": "Moonshot AI",
+      "doubao": "Doubao",
+      "aws": "AWS"
+    },
+    "empty": "No models match the current filters",
+    "listLoading": "Loading models…",
+    "loadFiltersError": "Could not load filters. Check network or API configuration.",
+    "loadListError": "Could not load models. Check network or API configuration.",
+    "tagContext": "{{k}}K context",
+    "tagParams": "{{p}} params",
+    "input": "Input: ",
+    "output": "Output: ",
+    "perK": " / K tokens",
+    "healthy": "Healthy",
+    "maintenance": "Maintenance",
+    "modelInfoAria": "Model details",
+    "detailOpenAria": "View model details",
+    "detailModalTitle": "Model details",
+    "detailModalClose": "Close",
+    "detailModalProvider": "Provider",
+    "detailModalType": "Model type",
+    "detailModalDesc": "Description",
+    "detailModalPricing": "Pricing granularity",
+    "pricingGranularity": "Pricing granularity",
+    "pricingPerToken": "Per token",
+    "pricingPer1k": "Per 1,000 tokens",
+    "pricingPer1m": "Per 1M tokens",
+    "detailInputUnitPrice": "Input token unit price",
+    "detailOutputUnitPrice": "Output token unit price",
+    "detailPriceContextClosed": "Input length [{{min}}, {{max}}]",
+    "detailPriceContextOpen": "Input length [{{min}}, +)",
+    "detailPriceColContext": "Context (K tokens)",
+    "detailPriceColInput": "Input unit price",
+    "detailPriceColOutput": "Output unit price",
+    "detailPriceColCacheStore": "Cache storage",
+    "detailPriceColCacheHit": "Cache hit",
+    "detailPriceDash": "—",
+    "detailPriceLimitedFree": "Limited-time free",
+    "demoDetailToast": "Model details will show here once the API is connected (demo).",
+    "detailToast": "Capabilities and pricing follow your console and API responses.",
+    "copyNameHint": "Click to copy the full model name",
+    "copyNameAria": "Copy model name",
+    "copyNameSuccess": "Model name copied",
+    "copyNameFail": "Copy failed — select the text manually (some browsers block clipboard on non-HTTPS)",
+    "prev": "Previous",
+    "next": "Next",
+    "range": "Showing {{from}}–{{to}} of {{total}}"
+  },
+  "docsLayout": {
+    "moduleNavAria": "Documentation modules",
+    "navApiDocs": "API documentation",
+    "navFeatureSelfBuilt": "Self-developed foundation",
+    "navFeatureHardcore": "Hardcore infrastructure",
+    "navFeatureCostPerf": "Ultimate value",
+    "navPartnerRules": "Partner program rules",
+    "navPrivacy": "Privacy & terms",
+    "seqNavAria": "Read next in documentation"
+  },
+  "docsFeature": {
+    "selfBuilt": {
+      "title": "Self-developed foundation",
+      "intro": "We keep critical parts of the large-model Token path under our own engineering lifecycle—ingress, metering, billing, and hand-off to upstream inference—so behavior stays predictable instead of stitched from unrelated components. This page expands the homepage card with the same title.",
+      "s1": {
+        "title": "Scope and boundaries",
+        "body": "In-house work focuses on platform-controlled scheduling, protocol alignment, observability, and commercialization; model intelligence still comes from compliant upstream engines. The model field in OpenAI-compatible calls selects SKUs we have onboarded and validated—see the console and model hub for capability limits."
+      },
+      "s2": {
+        "title": "Token delivery and stability",
+        "body": "We normalize metering, streaming, and error semantics so switching models does not rewrite your client. Parameterize max_tokens, temperature, and similar knobs in production, and watch announcements for model lifecycle and multiplier changes."
+      },
+      "s3": {
+        "title": "How this ties to API docs and the console",
+        "body": "The “First API call” doc covers auth, base_url, and samples; the console covers keys, usage, and invoices. The foundation does not change how you use OpenAI-style SDKs, but the gateway applies rate limits, auditing, and mapping—follow live responses and Swagger."
+      },
+      "s4": {
+        "title": "Release cadence and compatibility",
+        "body": "Rollouts ship with in-app notices and doc updates. Plan canary windows and keep downgrade models for critical paths. Live capabilities and contracts are authoritative."
+      }
+    },
+    "hardcore": {
+      "title": "Hardcore infrastructure",
+      "intro": "Owned compute and hardware clusters back throughput and latency at the physical layer: we shorten the path from “request hits the platform” to “capacity starts inferring,” and we keep redundancy and observability for peak traffic. This page expands the homepage card with the same title.",
+      "s1": {
+        "title": "Capacity and redundancy",
+        "body": "Capacity planning uses owned or long-term compute pools with headroom for typical peaks. Regions, redundancy, and SLA language belong in commercial agreements; ask about dedicated or isolated footprints through enterprise sales."
+      },
+      "s2": {
+        "title": "Latency, geography, and routing",
+        "body": "With multiple ingress options, routing weighs client network health and upstream status to avoid congested or unnecessarily long paths. Prefer streaming/SSE for chat UX and handle cancellation cleanly."
+      },
+      "s3": {
+        "title": "Peaks, queues, and scale-up",
+        "body": "Extreme peaks can still queue or return HTTP 429; implement backoff with bounded retries and keep downgrade paths. Higher concurrency, reserved capacity, or annual commits are usually negotiated commercially."
+      },
+      "s4": {
+        "title": "Observability, triage, and support",
+        "body": "Retain request ids or traces when responses expose them to separate network, quota, and upstream issues. If latency or error rates spike, contact support with timeframe, model, and rough geography."
+      }
+    },
+    "costPerf": {
+      "title": "Ultimate value",
+      "intro": "As an upstream Token supplier, we trim avoidable middle layers so more of your spend becomes actual usage: usage-based billing by default with clear dimensions for individuals and enterprises. This page expands the homepage card with the same title.",
+      "s1": {
+        "title": "Pricing logic and transparency",
+        "body": "Most SKUs price input and output tokens separately; long-context or high-multiplier models may use different unit rates. Treat console and hub pricing as authoritative—numbers here are illustrative."
+      },
+      "s2": {
+        "title": "Statements, reconciliation, and plans",
+        "body": "The console exposes call history and billing filters as shipped—reconcile gateway usage against app logs on a cadence you trust. Bundles, prepaid balances, or promos follow their campaign pages and agreements."
+      },
+      "s3": {
+        "title": "Enterprise procurement",
+        "body": "Where eligible, we support CNY settlement and corporate invoicing; tax treatment follows what sales confirms in writing. If web copy disagrees with your contract, the contract and pre-payment confirmation win."
+      },
+      "s4": {
+        "title": "Channels and partners",
+        "body": "If you buy through a channel, still reconcile against platform statements and contracts. Partner onboarding rules live under “Partner program rules” in the sidebar; where pages disagree, follow the dedicated document."
+      }
+    },
+    "privacy": {
+      "title": "Privacy first",
+      "intro": "We default to necessity, minimization, and auditability for data related to API usage: TLS on the wire, access-controlled storage for sensitive configuration, and enterprise options for retention and compliance discussions.",
+      "s1": {
+        "title": "Transit and storage",
+        "body": "Clients talk to the gateway over HTTPS; persisted metadata for accounts, keys, and orders follows common access-control and auditing practices. Whether inference payloads are logged or retained—and for how long—depends on product mode and contract—confirm with legal/commercial before signing."
+      },
+      "s2": {
+        "title": "Enterprise retention and compliance",
+        "body": "If regulations or internal policy require log geography, retention windows, or key rotation cadence, route through the enterprise evaluation path. We expose configuration or integrations where feasible, but you remain responsible as controller/processor with your counsel."
+      },
+      "s3": {
+        "title": "API keys and separation of duties",
+        "body": "Use distinct keys per environment (dev/stage/prod) and rotate regularly; never ship long-lived secrets in public clients. Disable or revoke keys immediately on staffing changes—the console supports revocation."
+      },
+      "s4": {
+        "title": "Disclaimers and updates",
+        "body": "This page is a product overview—not legal advice. Privacy notices and DPAs follow the published versions; when they change, we will announce them—keep contact channels current."
+      }
+    }
+  },
+  "docsPartnerRules": {
+    "title": "Partner program rules",
+    "intro": "These rules apply to partners who apply through this platform to resell compute and model services. Final commercial terms are governed by signed agreements; this page is a public summary so you can review the basics before joining.",
+    "s1": {
+      "title": "1. Scope and eligibility",
+      "body": "The program is for legally registered businesses or authorized team leads who can bear civil liability independently. You must provide truthful information; we may request additional documents during review or operations. If anything differs from the public /partners page, the information you confirm before payment and your contract prevail."
+    },
+    "s2": {
+      "title": "2. Fees and payment",
+      "body": "Fees are as published on the platform. Complete payment only through the official channels we provide and keep your receipts. Risks from unofficial payments are yours. Partner benefits and support start after payment is received and approval is granted."
+    },
+    "s3": {
+      "title": "3. Marketing and compliance",
+      "body": "You must describe product capabilities, pricing, and limits accurately—no false or misleading claims. You must follow applicable laws and regulations. You bear responsibility for complaints, penalties, or losses caused by non-compliant marketing. We may suspend or end the partnership depending on severity."
+    },
+    "s4": {
+      "title": "4. Support and disputes",
+      "body": "We may notify you of policy updates via announcements, email, or in-app messages—please keep contact details current. For questions on rules or settlements, use the Contact page. Disputes should first be resolved through good-faith negotiation; where negotiation fails, applicable law and your contract apply."
+    }
+  },
+  "apiDocs": {
+    "title": "API documentation",
+    "copy": "Copy code",
+    "toast": {
+      "copied": "Copied to clipboard",
+      "copyFail": "Copy failed — select and copy manually"
+    },
+    "firstCall": {
+      "title": "Your first API call",
+      "intro": "The API follows OpenAI-compatible request and response shapes, so you can use official or community SDKs."
+    },
+    "basic": {
+      "title": "Base configuration",
+      "apiKeyValue": "Apply for an API Key in the <0>console</0>.",
+      "copyBaseUrl": "Click to copy",
+      "copyBaseUrlAria": "Copy base_url to clipboard"
+    },
+    "compatTip": {
+      "title": "Note",
+      "body": "For OpenAI compatibility, all endpoints are under the /v1 prefix."
+    },
+    "models": {
+      "title": "Models",
+      "intro": "We offer multiple foundation models for different workloads:",
+      "pricingIn": "Input: ",
+      "pricingOut": "Output: ",
+      "healthy": "Healthy",
+      "cardInfoAria": "Model information",
+      "cardInfoToast": "Capabilities and pricing follow your console and live deployment.",
+      "cards": {
+        "m1": {
+          "name": "MiniMax-M2.5-FP8-INT4-AWQ",
+          "desc": "Strong general chat model, balanced latency and quality for multi-turn dialogue.",
+          "priceIn": "¥0.12 / K tokens",
+          "priceOut": "¥0.36 / K tokens",
+          "tag1": "Text",
+          "tag2": "128K context"
+        },
+        "m2": {
+          "name": "Qwen3.5-35B-A3B-AWQ-4bit",
+          "desc": "MoE architecture with friendly inference cost for batch and mid-complexity tasks.",
+          "priceIn": "¥0.08 / K tokens",
+          "priceOut": "¥0.24 / K tokens",
+          "tag1": "Text",
+          "tag2": "Long context"
+        },
+        "m3": {
+          "name": "Qwen3.5-27B-FP8",
+          "desc": "FP8 quantization for higher throughput per GPU.",
+          "priceIn": "¥0.06 / K tokens",
+          "priceOut": "¥0.18 / K tokens",
+          "tag1": "Text",
+          "tag2": "High throughput"
+        }
+      }
+    },
+    "chat": {
+      "title": "Chat completions",
+      "intro": "Sample request below. Set stream to true for SSE streaming.",
+      "tabCurl": "curl",
+      "tabPython": "python",
+      "tabNode": "nodejs"
+    },
+    "requestParams": {
+      "title": "Request parameters",
+      "colParam": "Parameter",
+      "colType": "Type",
+      "colRequired": "Required",
+      "colDesc": "Description",
+      "row1": {
+        "param": "model",
+        "type": "string",
+        "req": "Yes",
+        "desc": "Model id, e.g. gpt-4-turbo, gpt-3.5-turbo"
+      },
+      "row2": {
+        "param": "messages",
+        "type": "array",
+        "req": "Yes",
+        "desc": "Chat messages with role and content"
+      },
+      "row3": {
+        "param": "stream",
+        "type": "boolean",
+        "req": "No",
+        "desc": "Stream tokens; default false"
+      },
+      "row4": {
+        "param": "temperature",
+        "type": "float",
+        "req": "No",
+        "desc": "Sampling temperature between 0 and 1"
+      },
+      "row5": {
+        "param": "max_tokens",
+        "type": "integer",
+        "req": "No",
+        "desc": "Maximum tokens to generate"
+      }
+    },
+    "response": {
+      "title": "Response example"
+    },
+    "embedding": {
+      "title": "Embeddings API",
+      "intro": "Get vector representations for semantic search and similarity."
+    },
+    "errors": {
+      "title": "HTTP errors",
+      "colCode": "Code",
+      "colType": "Type",
+      "colDesc": "Description",
+      "e200": { "type": "OK", "desc": "Success" },
+      "e400": { "type": "Bad Request", "desc": "Invalid payload or parameters" },
+      "e401": { "type": "Unauthorized", "desc": "Invalid or expired API key" },
+      "e429": { "type": "Rate Limit", "desc": "Too many requests" },
+      "e500": { "type": "Server Error", "desc": "Please try again later" }
+    },
+    "rateLimit": {
+      "heading": "Default limits",
+      "intro": "Per API key by default:",
+      "b1": "Requests per minute: 60",
+      "b2": "Tokens per minute: 100,000",
+      "b3": "Concurrent requests: 5",
+      "footer": "Contact sales to raise limits."
+    },
+    "legalDisclaimer": "This API is for testing and evaluation only. Comply with intellectual property laws and applicable regulations. No illegal use. The platform assumes no liability for misuse."
+  },
+  "contact": {
+    "notice": {
+      "tip": "Note: ",
+      "line1": "Need help? Our support team is ready to assist you.",
+      "line2": "Hours: <hl>Mon–Sun, 10:00–24:00</hl> · Email is usually answered within <hl>24 hours</hl>."
+    },
+    "kicker": "Contact Us",
+    "title": "Customer support",
+    "subtitle": "We are here to help. Reach us through any of the options below.",
+    "emailValue": "srd@njsrd.com",
+    "email": {
+      "title": "Email",
+      "cta": "Contact us",
+      "copy": "Copy email"
+    },
+    "phone": {
+      "title": "Phone",
+      "na": "Not yet available",
+      "cta": "Contact us",
+      "toast": "Phone support is not available yet. Please use email or WeChat."
+    },
+    "hours": {
+      "title": "Hours",
+      "value": "Mon–Sun, 10:00–24:00"
+    },
+    "qr": {
+      "title": "WeChat QR code",
+      "hint": "Scan to chat with support",
+      "footerHint": "Add your QR image as public/contact-support-qr.png to replace the placeholder."
+    },
+    "toast": {
+      "emailCopied": "Email copied",
+      "copyFail": "Copy failed—please copy manually"
+    }
+  },
+  "partners": {
+    "hero": {
+      "titleBefore": "Become our ",
+      "titleGradient": "exclusive agent",
+      "subtitle": "Start your business journey with ease.",
+      "whyFeeTitle": "Why is there a joining fee?",
+      "whyFeeDesc": "The fee is not an entry barrier. It is a bundled service + long-term revenue authorization. One-time payment, lifetime benefits, and no hidden charges.",
+      "r1Title": "Long-term revenue assurance",
+      "r1Desc": "Keep user attribution for life and continuously earn recharge commission.",
+      "r2Title": "Dedicated technical support",
+      "r2Desc": "Partner console, customized frontend, and dedicated API integration support.",
+      "r3Title": "Brand and resource enablement",
+      "r3Desc": "Access premium compute resources and complete marketing materials.",
+      "r4Title": "Dedicated operations support",
+      "r4Desc": "Growth plan, campaign playbooks, and support to build your business loop.",
+      "joinFeeLabel": "Partnership fee",
+      "joinFeeTagline": "Three tiers · clear pricing",
+      "joinFeeTierAmount": "¥{{amount}}",
+      "joinFeeOriginalLabel": "Original",
+      "joinFeeOriginalAria": "Reference price before discount: {{price}}",
+      "tierCardRebateDynamic": "Lifetime rebate {{pct}}%",
+      "agentPackagesLoadFail": "Could not load partner tiers. Refresh and try again.",
+      "agentPackagesEmpty": "No partner tiers are available right now.",
+      "tierCardFootnotesStart": [
+        "Low barrier entry with starter materials and onboarding (per current kit).",
+        "Rebates settle per order in the console; details follow agreement + published rules.",
+        "Weekday-first tickets; no onsite or dedicated enterprise AM."
+      ],
+      "tierCardFootnotesGrowth": [
+        "Higher rebate for partners with repeatable traffic or private channels.",
+        "Early notice on promos and model launches; quotas follow each announcement.",
+        "Quarterly reviews + remote advisor time—no onsite or custom engineering."
+      ],
+      "tierCardFootnotesPro": [
+        "Top rebate plus HQ co-marketing for regional or scaled teams.",
+        "Large-deal / procurement co-sell by application (reviewed); per contract/policy.",
+        "Named contact + escalation lane; still within published SLAs—no unlimited staffing."
+      ],
+      "joinFeeTierNameStart": "Tier 1",
+      "joinFeeTierNameGrowth": "Tier 2",
+      "joinFeeTierNamePro": "Tier 3",
+      "joinFeeRecommended": "Popular",
+      "discountStampOff": "OFF",
+      "discountStampAria": "{{pct}}% limited-time discount",
+      "tierCardTitleStart": "Starter Launch",
+      "tierCardTitleGrowth": "Growth Advanced",
+      "tierCardTitlePro": "Flagship Partner",
+      "tierCardRebateStart": "Lifetime rebate 5%",
+      "tierCardRebateGrowth": "Lifetime rebate 10%",
+      "tierCardRebatePro": "Lifetime rebate 15%",
+      "tierCardStartFeature1": "5% lifetime top-up revenue share",
+      "tierCardStartFeature2": "Complete operations kit (posters / copy / tutorials)",
+      "tierCardStartFeature3": "7x12 standard technical support",
+      "tierCardStartFeature4": "Dedicated partner console (data / earnings / orders)",
+      "tierCardGrowthFeature1": "Includes all Starter Launch benefits",
+      "tierCardGrowthFeature2": "10% premium rebate (directly boosts earnings)",
+      "tierCardGrowthFeature3": "1-on-1 operations consultant (custom growth plan)",
+      "tierCardGrowthFeature4": "Priority beta access to new features and models",
+      "tierCardProFeature1": "Includes all benefits from first two tiers",
+      "tierCardProFeature2": "15% top-tier revenue share",
+      "tierCardProFeature3": "30-day 1-on-1 growth sprint support",
+      "tierCardProFeature4": "Platform bonus + product beta + industry summit access",
+      "limitedTime": "Limited-Time Offer · Today Only",
+      "limitedTimeDesc": "Join now to unlock exclusive support benefits. Spots are limited.",
+      "b2": "Customize pricing, landing pages, and tutorials.",
+      "b3": "Earn a share of user top-ups.",
+      "apply": "Join now",
+      "currentPurchased": "Already purchased",
+      "learnMore": "Learn more",
+      "ctaConsult": "1-on-1 Consultation"
+    },
+    "joinPayModal": {
+      "title": "Partner enrollment payment"
+    },
+    "joinModal": {
+      "title": "Partner payment",
+      "subtitle": "Choose a payment method to complete your enrollment.",
+      "payStartFail": "Could not start partner enrollment payment",
+      "invalidTier": "Invalid enrollment tier. Close this dialog and pick a tier from the pricing cards.",
+      "alipay": "Alipay",
+      "wechat": "WeChat Pay",
+      "back": "Back",
+      "scanAlipay": "Scan the QR code below with Alipay to pay.",
+      "scanWechat": "Scan the QR code below with WeChat to pay.",
+      "qrLoading": "Preparing payment code…",
+      "demoQrHint": "Demo QR only. Set collection image URLs in env for production.",
+      "placeholderHint": "Set QR image URLs in VITE_PARTNER_JOIN_ALIPAY_QR_URL and VITE_PARTNER_JOIN_WECHAT_QR_URL.",
+      "confirmPaid": "I've completed payment",
+      "successTitle": "Join successful",
+      "successHint": "Welcome aboard—your agent access will be enabled shortly.",
+      "goConsole": "Go to console",
+      "close": "Close",
+      "failTitle": "Enrollment payment not completed",
+      "failHint": "The order indicates payment failed or was closed. If you were charged, contact support. You can close and try enrollment payment again.",
+      "failDone": "Close"
+    },
+    "audiences": {
+      "titleBefore": "Target ",
+      "titleGradient": "audiences",
+      "subtitle": "Flexible earning paths for different groups.",
+      "c1Title": "Students",
+      "c1Desc": "Extra time to promote and cover living and leisure expenses through simple campaigns.",
+      "c2Title": "Creators & KOLs",
+      "c2Desc": "With an audience, add a link at the end of posts or articles to monetize effortlessly.",
+      "c3Title": "Side hustlers",
+      "c3Desc": "No heavy time commitment—promote in spare time and earn on the side.",
+      "c4Title": "Freelancers",
+      "c4Desc": "Flexible schedules—grow income by joining the distribution program."
+    },
+    "traits": {
+      "titleBefore": "If you have these ",
+      "titleGradient": "traits",
+      "subtitle": "Join us and earn with a few clicks.",
+      "t1Title": "Many channels",
+      "t1Desc": "Diverse promotion channels and resources.",
+      "t2Title": "Wide network",
+      "t2Desc": "Broad social reach and influence.",
+      "t3Title": "Fan base",
+      "t3Desc": "Stable followers and engagement.",
+      "t4Title": "Spare time",
+      "t4Desc": "Flexible hours—you set the pace."
+    },
+    "stories": {
+      "titleBefore": "Success ",
+      "titleGradient": "stories",
+      "subtitle": "They made it—you can too.",
+      "s1Metric": "3000+",
+      "s1Role": "Mr. Zhang · Student",
+      "s1Desc": "Campus communities—monthly income 3000+.",
+      "s2Metric": "6000+",
+      "s2Role": "Ms. Li · Teacher",
+      "s2Desc": "Education network—steady monthly income.",
+      "s3Metric": "8000+",
+      "s3Role": "Mr. Wang · Creator",
+      "s3Desc": "Fan traffic—strong earnings."
+    },
+    "why": {
+      "titleDark": "Why ",
+      "titleGradient": "us",
+      "subtitle": "More professional. More convenient.",
+      "q1": "Why partner with us?",
+      "a1": "Stable APIs and compute, transparent settlement, and ops support so you can launch a branded experience and keep earning.",
+      "q2": "How do I become an agent?",
+      "a2": "After approval you get a setup console: connect your domain, set prices and tutorials, then start acquiring users.",
+      "q3": "Agent rules",
+      "a3": "Follow promotion guidelines and user agreements—no misleading claims or abusive traffic. Tiers and policies are published in-contract and in-console.",
+      "q4": "Revenue share",
+      "a4": "Share is based on billable user spend; settled to your agent wallet on a cadence, with withdrawal or transfer per live policy."
+    },
+    "planAdjustNotice": "This partnership program and revenue settlement terms may change with market conditions. The latest published version in real time prevails.",
+    "footerCtaHint": "Already an agent? Sign in to manage invite codes, commissions, and payouts.",
+    "footerCta": "Go to invites & commissions",
+    "tools": {
+      "sectionTitle": "Agent tools & data",
+      "sectionSubtitle": "Sign in to manage invite codes, commissions, and payouts.",
+      "balanceLabel": "Available commission",
+      "transfer": "Transfer",
+      "overview": "Overview",
+      "statUsers": "Registered users",
+      "statRate": "Commission rate",
+      "statPending": "Pending commission",
+      "statTotal": "Lifetime earned",
+      "codesTitle": "Invite codes",
+      "generateCode": "Generate code",
+      "codeCol": "Code",
+      "timeCol": "Created",
+      "copyLink": "Copy link",
+      "recordsTitle": "Payout history",
+      "timePaid": "Paid at",
+      "amount": "Amount",
+      "recordsEmpty": "No payouts yet",
+      "toastCopied": "Invite link copied",
+      "toastCopyFail": "Copy failed—copy manually",
+      "toastGenerated": "New invite code created",
+      "toastTransfer": "Transfers will be available when billing is connected (demo)"
+    }
+  },
+  "console": {
+    "common": {
+      "close": "Close",
+      "send": "Send",
+      "loading": "Loading…"
+    },
+    "auth": {
+      "inviteBindFailed": "Could not bind invite code",
+      "fetchMeFailed": "Could not load profile",
+      "retry": "Retry",
+      "loggedOut": "Signed out",
+      "tokenExpiredReLogin": "Your session has expired. Please sign in again."
+    },
+    "shell": {
+      "defaultTitle": "Console",
+      "closeMenu": "Close menu",
+      "closeSidebar": "Close",
+      "openMenu": "Open menu",
+      "wechatAccount": "WeChat account",
+      "logout": "Sign out",
+      "navSection": {
+        "chat": "Chat",
+        "console": "Console",
+        "personal": "Account"
+      },
+      "nav": {
+        "usage": "Usage",
+        "apiKeys": "API keys",
+        "plans": "Plans",
+        "invitations": "Invites",
+        "aiChat": "AI chat",
+        "profile": "Profile",
+        "recharge": "Top up",
+        "billing": "Billing",
+        "commissionWithdraw": "Commission withdrawal"
+      }
+    },
+    "profile": {
+      "title": "Profile",
+      "subtitle": "Keep your name and email up to date for notifications and account management.",
+      "name": "Name",
+      "namePlaceholder": "Enter your name",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "nameRequired": "Name is required",
+      "nameTooShort": "Name must be at least 2 characters",
+      "nameTooLong": "Name must be 32 characters or fewer",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email format",
+      "edit": "Edit",
+      "save": "Save",
+      "cancel": "Cancel",
+      "reset": "Reset",
+      "saveOk": "Profile updated",
+      "saveFail": "Failed to save profile",
+      "loadFail": "Failed to load profile"
+    },
+    "usage": {
+      "balanceTitle": "Balance",
+      "commissionTitle": "Commission",
+      "commissionPlaceholder": "—",
+      "commissionJoinCta": "Become a partner",
+      "accountUsedTokensDailyTitle": "Today's used tokens",
+      "accountUsedTokensTitle": "Lifetime used tokens",
+      "goRecharge": "Top up",
+      "commissionWithdrawCta": "Withdraw",
+      "monthSpend": "This month",
+      "sectionTitle": "Monthly usage",
+      "monthSelectAria": "Select month",
+      "monthApr2024": "Apr 2024",
+      "monthMar2024": "Mar 2024",
+      "spendLine": "Spend ¥{{amount}}",
+      "tokensLine": "Daily tokens (sum): {{n}} this month",
+      "loadFail": "Could not load usage data",
+      "summaryTokens": "Recent window total tokens: {{n}}",
+      "monthSpendTokenApprox": "~{{n}}k tokens (shown when API has no per-day currency)",
+      "chartTokenNote": "Y-axis is thousands of tokens when currency is unavailable.",
+      "emptyChart": "No usage for this month"
+    },
+    "apiKeys": {
+      "tabPackage": "Packages",
+      "tabMetering": "Metered",
+      "tabAria": "API key view",
+      "packageTabLoadFail": "Could not load purchased packages",
+      "packageTabEmpty": "No purchased subscription packages yet. Buy one under Plans first.",
+      "packageCardMenuAria": "Package API key actions",
+      "createOnCardBtn": "Create key",
+      "deleteOnCardBtn": "Delete key",
+      "modalFormHintPackage": "Creating an API key for package \"{{name}}\". Pick a name for this key.",
+      "createHeaderBtn": "Create API key",
+      "toastNameRequired": "Enter a name",
+      "toastCreated": "API key created",
+      "toastCreateFail": "Creation failed. Try HTTPS or check your network.",
+      "toastLoadFail": "Could not load API keys",
+      "toastCopied": "Copied to clipboard",
+      "toastCopyFail": "Copy failed—copy the key manually",
+      "notice": "This list shows all your API keys. A secret is only shown once when created—store it safely. Do not share your API key or expose it in client-side code. For your security, we may disable keys we believe have been leaked.",
+      "colName": "Name",
+      "colKey": "Key",
+      "copyKeyTitle": "Click to copy",
+      "copyKeyHoverHint": "Click to copy the full key. Full secret:",
+      "colCreated": "Created",
+      "colActions": "Actions",
+      "empty": "No API keys yet",
+      "modalFormTitle": "Create API key",
+      "modalFormHint": "Choose a name you will recognize later.",
+      "labelName": "Name",
+      "placeholderName": "e.g. Production",
+      "cancel": "Cancel",
+      "create": "Create",
+      "modalRevealTitle": "Save your API key",
+      "copy": "Copy",
+      "delete": "Delete",
+      "deleteConfirm": "Delete API key \"{{name}}\"? This cannot be undone.",
+      "toastDeleted": "API key deleted",
+      "toastDeleteFail": "Failed to delete API key"
+    },
+    "invitations": {
+      "loadFail": "Could not load invites",
+      "inviteTitle": "Invite code",
+      "invitedList": "Invited users",
+      "colName": "Name",
+      "colInviteStatus": "Invite status",
+      "colRewardAmount": "Reward amount",
+      "colInvitedAt": "Invited at",
+      "emptyInvited": "No invites yet",
+      "noCode": "No invite code",
+      "copyShareMessage": "AI side hustle momentum — SRD compute open platform partner program\n🎁 New users: ¥5 free credit on sign-up, use LLM APIs at no cost to start\n🎁 Two-way invites: earn when friends join — rewards for both sides\n💰 Top-tier agent rebate: 15% of gross volume, ongoing\nDirect from model infra, zero barrier — save for yourself, earn by sharing\nYour on-ramp to monetizing AI traffic!\nYour invite link:\n{{url}}",
+      "inviteStatus": {
+        "COMPLETED": "Invited"
+      }
+    },
+    "recharge": {
+      "limitDetailTitle": "Per top-up limits",
+      "limitDetailMinLabel": "Minimum",
+      "limitDetailMaxLabel": "Maximum",
+      "payAmount": "Amount",
+      "custom": "Custom",
+      "placeholderAmount": "Enter amount",
+      "hintRange": "Enter an amount between ¥{{min}} and ¥{{max}}",
+      "total": "Total",
+      "payMethod": "Payment method",
+      "wechatPay": "WeChat Pay",
+      "alipayPay": "Alipay",
+      "nextStep": "Continue",
+      "payStartFail": "Could not start payment",
+      "limitsLoadFail": "Could not load top-up limits; using defaults. Try again later.",
+      "toastAmountBelowMin": "Amount cannot be lower than {{min}} CNY",
+      "toastAmountAboveMax": "Amount cannot exceed {{max}} CNY",
+      "toastAmountRequired": "Enter a valid top-up amount",
+      "payDemoToast": "Will pay ¥{{amount}} with {{channel}}",
+      "channelWechat": "WeChat Pay",
+      "channelAlipay": "Alipay",
+      "payModal": {
+        "title": "Scan to pay",
+        "amountLine": "Amount due ¥{{amount}}",
+        "scanWechat": "Scan the QR code below with WeChat to pay.",
+        "scanAlipay": "Scan the QR code below with Alipay to pay.",
+        "qrGenerating": "Generating QR code…",
+        "demoQrCaption": "Payment QR code",
+        "placeholderHint": "Set VITE_RECHARGE_WECHAT_QR_URL / VITE_RECHARGE_ALIPAY_QR_URL for real collection QR images.",
+        "confirmPaid": "I've completed payment",
+        "pollingHint": "We will confirm automatically after payment—please keep this window open.",
+        "cannotAutoVerify": "No order id was returned, so we cannot auto-confirm. If you paid, check billing/orders or contact support.",
+        "verifying": "Checking payment status…",
+        "missingOrderId": "Missing order id, so payment status cannot be verified. Please contact support.",
+        "verifyFail": "Could not query the order. Please try again.",
+        "notPaidYet": "Payment not detected yet. Please confirm you finished paying in WeChat, or try again later.",
+        "paymentFailed": "The order indicates payment failed or was closed. Please start again.",
+        "failTitle": "Payment not completed",
+        "failHint": "The order indicates payment failed or was closed. If you were charged, check billing or contact support. You can close this window and try again.",
+        "failDone": "Close",
+        "successTitle": "Payment successful",
+        "successHint": "Thanks for your payment. Settlement time depends on your payment channel.",
+        "done": "Done"
+      },
+      "tipTitle": "Notes",
+      "tip1": "Balance is used for API usage and related services. All charges are in CNY.",
+      "tip2": "Settlement may be delayed. If funds do not arrive, contact support.",
+      "tipPayFail": "If payment fails, <report>report a failed payment</report>.",
+      "reportPayFailToast": "Thanks—we will follow up shortly."
+    },
+    "billing": {
+      "ordersTitle": "Orders",
+      "transactionsTitle": "Transactions",
+      "loadFail": "Could not load billing data",
+      "colOrderId": "Order ID",
+      "colStatus": "Status",
+      "colOrderType": "Order type",
+      "colPaymentMethod": "Payment method",
+      "colTransactionId": "Transaction ID",
+      "colAmount": "Amount",
+      "colCreatedAt": "Created",
+      "colTxAccountType": "Account type",
+      "colTxType": "Type",
+      "colTxDescription": "Description",
+      "colBalanceBefore": "Balance before",
+      "colBalanceAfter": "Balance after",
+      "emptyRecharge": "No orders",
+      "emptyTx": "No transactions",
+      "pagingPrev": "Previous",
+      "pagingNext": "Next",
+      "pagingRange": "{{from}}–{{to}} of {{total}}",
+      "pagingPage": "{{current}} / {{pages}}",
+      "orderStatus": {
+        "PENDING": "Pending",
+        "PAID": "Paid",
+        "FAILED": "Failed",
+        "REFUNDED": "Refunded"
+      },
+      "orderType": {
+        "package": "Package",
+        "agent_register": "Agent registration",
+        "recharge": "Top-up"
+      },
+      "paymentMethod": {
+        "wechat": "WeChat Pay",
+        "alipay": "Alipay"
+      },
+      "txType": {
+        "recharge": "Top-up",
+        "package": "Package purchase",
+        "agent_register": "Agent registration",
+        "reward": "Invite rebate",
+        "commission": "Commission",
+        "usage": "Consumption",
+        "withdrawal": "Withdrawal"
+      },
+      "txAccountType": {
+        "commission": "Commission",
+        "balance": "Balance"
+      }
+    },
+    "commissionWithdraw": {
+      "balanceLabel": "Commission balance",
+      "withdraw": "Withdraw",
+      "recordsTitle": "Withdrawals",
+      "emptyRecords": "No withdrawals yet",
+      "loadFail": "Could not load withdrawals",
+      "detailTitle": "Withdrawal detail",
+      "detailLabelId": "ID",
+      "detailLabelAmount": "Amount",
+      "detailLabelBankAccount": "Bank account",
+      "detailLabelStatus": "Status",
+      "detailLabelOutBatchNo": "Transfer-out batch no.",
+      "detailLabelTransferBillNo": "Transfer bill no.",
+      "detailLabelFailureReason": "Failure reason",
+      "detailLabelCreated": "Created",
+      "detailLabelUpdated": "Updated",
+      "detailConfirmWechatReceipt": "Scan in WeChat to confirm receipt",
+      "detailConfirmWechatReceiptHint": "Scan the QR code with WeChat to confirm; this view refreshes when the status updates.",
+      "detailPendingNoPackage": "Confirm parameters are missing; refresh later or contact support.",
+      "detailFail": "Could not load detail",
+      "withdrawOk": "Withdrawal submitted",
+      "withdrawFail": "Withdrawal failed",
+      "wechatBindModalTitle": "Bind WeChat service account",
+      "wechatBindModalHint": "Scan the QR code with WeChat to authorize. After binding succeeds, your withdrawal request will continue automatically.",
+      "wechatBindQrCaption": "Keep this window open. If the code expires, close it and start the withdrawal again.",
+      "wechatWithdrawQrTitle": "Scan to confirm receipt (WeChat)",
+      "wechatWithdrawQrHint": "Scan the QR code with WeChat and complete “confirm receipt” inside WeChat.",
+      "wechatWithdrawQrCaption": "Test flow: a successful prompt does not guarantee payout; follow records and settlement.",
+      "wechatWithdrawQrCaptionProd": "Finish confirmation in WeChat; use withdrawal records and your balance as the source of truth.",
+      "wechatWithdrawMissingPackage": "The API did not return package_info; cannot build the confirm QR code.",
+      "wechatWithdrawSubmitted": "Withdrawal initiated—scan the QR code to finish WeChat confirmation.",
+      "wechatWithdrawLocalhostWarn": "The QR target is localhost—phones cannot open it. Either set VITE_PUBLIC_APP_ORIGIN=http://<LAN-IP>:5173 and open the console via that IP, or set VITE_WECHAT_CONFIRM_QR_ORIGIN=https://your-deployed-origin so the scan opens the hosted confirm page (must match the API environment that issued package_info).",
+      "wechatWithdrawNoPollId": "No withdrawal id was returned; status cannot be polled automatically. Refresh the list later if needed.",
+      "wechatWithdrawPollCompleted": "Withdrawal completed; commission and list refreshed.",
+      "wechatWithdrawPollTerminalFail": "This withdrawal ended ({{status}}); auto-refresh stopped.",
+      "wechatBindSuccess": "WeChat service account linked",
+      "withdrawNoBalance": "No commission available to withdraw",
+      "confirmWithdraw": "Withdraw full commission balance {{amount}}?",
+      "modalTitle": "Request withdrawal",
+      "modalHint": "Available commission (reference): {{amount}}",
+      "amountLabel": "Amount (CNY)",
+      "amountPlaceholder": "Enter amount",
+      "withdrawAll": "Withdraw all",
+      "submitWithdraw": "Confirm",
+      "cancelWithdraw": "Cancel",
+      "invalidAmount": "Enter a valid withdrawal amount",
+      "amountExceedsBalance": "Amount cannot exceed your commission balance",
+      "limitsLoadFail": "Could not load withdrawal limits; only balance is checked client-side. Try again later.",
+      "limitDetailTitle": "Per-withdrawal limits",
+      "limitDetailMinLabel": "Minimum",
+      "limitDetailMaxLabel": "Maximum",
+      "limitMinMax": "Platform limits per withdrawal: {{min}}–{{max}}",
+      "limitMin": "Minimum per withdrawal: {{min}}",
+      "limitMax": "Maximum per withdrawal: {{max}}",
+      "balanceBelowMinLimit": "Your available commission is below the minimum withdrawal amount {{min}}",
+      "amountBelowMin": "Withdrawal amount cannot be lower than {{min}}",
+      "amountAboveMax": "Withdrawal amount cannot exceed {{max}}",
+      "agentOnly": "Commission withdrawal is available to users who joined the agent program.",
+      "goPartners": "About the partner program",
+      "colBankAccount": "Bank account",
+      "bankAccountWechatDefault": "WeChat",
+      "colAmount": "Amount",
+      "colStatus": "Status",
+      "colOutBatchNo": "Transfer-out batch",
+      "colTransferBillNo": "Transfer bill no.",
+      "colFailureReason": "Failure reason",
+      "colCreated": "Created",
+      "status": {
+        "pending": "Pending",
+        "processing": "Processing",
+        "pending_user_confirm": "Awaiting user confirmation",
+        "wait_user_confirm": "Awaiting user confirmation",
+        "completed": "Completed",
+        "complete": "Completed",
+        "failed": "Failed",
+        "cancelled": "Cancelled",
+        "rejected": "Rejected"
+      }
+    },
+    "refund": {
+      "title": "Refunds",
+      "applyTab": "Request refund",
+      "historyTab": "History",
+      "hintTitle": "Notes",
+      "tips": [
+        "Refunds apply only to unused balance from online top-ups; promotional credits are not refundable.",
+        "Amounts with invoices issued or in progress must be cleared before applying.",
+        "We will review within several business days and notify you in-app or via your contact.",
+        "Payout timing depends on the channel and bank—typically 3–15 business days.",
+        "Fraudulent requests may be denied; we reserve the right to take further action.",
+        "If you disagree with the outcome, contact support with evidence.",
+        "This copy is for demo; live rules follow platform terms."
+      ],
+      "currencyTitle": "Currency",
+      "currencyDesc": "CNY, returned to the original payment method.",
+      "amountLine": "Refundable amount (top-ups − invoiced / in-flight − consumed)",
+      "feeHint": "Fees may apply per policy; details follow review (demo).",
+      "reasonLabel": "Reason",
+      "requiredMark": "Required",
+      "reasonHint": "Describe why you need a refund (about 10+ characters). Avoid unrelated text.",
+      "placeholder": "e.g. closing the account, accidental top-up",
+      "submit": "Submit",
+      "emptyHistory": "No refund requests yet",
+      "validationReason": "Enter a refund reason",
+      "toastReasonWarning": "Add a reason before submitting",
+      "toastSubmitSuccess": "Refund request submitted (demo)"
+    },
+    "plans": {
+      "tabMetering": "Metering",
+      "tabPackage": "Packages",
+      "tabEmpty": "No plans in this category",
+      "subtitlePersonal": "Pick the capacity and features that fit you.",
+      "loadFail": "Could not load packages",
+      "purchaseOk": "Purchase submitted",
+      "purchaseFail": "Purchase failed",
+      "payFailTitle": "Plan payment not completed",
+      "payFailHint": "The order indicates payment failed or was closed. If you were charged, check billing or contact support. You can close this window and try again.",
+      "payFailDone": "Close",
+      "empty": "No packages available",
+      "badgeApi": "API",
+      "owned": "Owned",
+      "ownedValidFrom": "Valid from",
+      "ownedValidUntil": "Valid until",
+      "descScrollRegionAria": "Plan description, scroll to read more",
+      "recommendedBadge": "Flagship pick",
+      "buy": "Buy",
+      "renew": "Renew",
+      "durationDaysUnit": " days",
+      "remainingDays": "{{days}} days left",
+      "tagAllModels": "All models supported",
+      "modelsModalTitle": "Models in this plan",
+      "modelsModalSubtitle": "{{name}}",
+      "modelsModalOpenAria": "View models included in this plan",
+      "modelsModalEmpty": "No model list for this plan",
+      "modelsMoreAria": "{{count}} models — hover to see the full list",
+      "modelsTooltipHeading": "Models",
+      "featureNexus": "Includes platform entitlements (subject to activation)",
+      "badgeHot": "Popular",
+      "currentPlan": "Current plan",
+      "upgradeTo": "Upgrade to {{name}}",
+      "toastSelected": "Demo: selected {{name}}",
+      "personal": {
+        "free": {
+          "name": "Free",
+          "price": "¥0",
+          "unit": "/ month",
+          "desc": "Explore what AI can do",
+          "features": [
+            "Simple explanations",
+            "Short chats on common questions",
+            "Try image generation",
+            "Limited memory and context"
+          ]
+        },
+        "go": {
+          "name": "Go",
+          "price": "¥59",
+          "unit": "/ month",
+          "desc": "More room to chat and create",
+          "features": [
+            "Go deeper on topics",
+            "Longer chats, more uploads",
+            "More realistic images for projects",
+            "More memory for smarter replies",
+            "Planning and task help",
+            "Projects, tasks, and custom GPTs"
+          ]
+        },
+        "plus": {
+          "name": "Plus",
+          "price": "¥149",
+          "unit": "/ month",
+          "desc": "The full individual experience",
+          "features": [
+            "Tackle harder problems",
+            "Longer chats across sessions",
+            "Create images faster",
+            "Remembers goals and history",
+            "Agent mode for trips and tasks",
+            "Organize projects and custom GPTs",
+            "Create and share Sora videos",
+            "Build apps with Codex",
+            "No ads"
+          ]
+        },
+        "pro": {
+          "name": "Pro",
+          "price": "¥1,499",
+          "unit": "/ month",
+          "desc": "Maximum productivity",
+          "features": [
+            "Advanced tasks and topics",
+            "Large projects; generous chat (fair use)",
+            "HD images at any size",
+            "Largest memory window",
+            "Agents for research and planning",
+            "Scale projects and automate workflows",
+            "Push Sora video limits",
+            "Ship faster with Codex",
+            "Early access to experiments"
+          ]
+        }
+      }
+    },
+    "aiChat": {
+      "labelApiKey": "API Key",
+      "labelModel": "Model",
+      "modelSelectPlaceholder": "Select a model",
+      "streaming": "Streaming",
+      "streamHint": "When on, read the reply as an SSE stream; when off, wait for one JSON response. Requires gateway support.",
+      "reset": "Reset chat",
+      "resetToast": "Chat cleared",
+      "emptyTitle": "Chat with AI",
+      "emptySubtitle": "Pick an API key and a model to start your LLM session.",
+      "placeholderInput": "Type a message… (Shift + Enter for newline)",
+      "patLabel": "API Key",
+      "patPlaceholder": "sk-…",
+      "apiKeySelectPlaceholder": "Select an API key",
+      "apiKeyLoadFail": "Could not load API keys",
+      "modelListLoadFail": "Could not load models for this API key",
+      "patRequired": "Please select an API key",
+      "sendFail": "Send failed",
+      "badJson": "Gateway returned non-JSON",
+      "emptyAssistant": "Model returned no text",
+      "copyReply": "Copy reply",
+      "copyUserMessage": "Copy message",
+      "reEditUserMessage": "Edit again",
+      "inlineEditCancel": "Cancel edit",
+      "inlineEditSubmit": "Send edited message",
+      "placeholderComposerWhileEditing": "Editing your last message… use the inline editor above, or cancel with ×",
+      "regenerateReply": "Regenerate",
+      "copiedReply": "Copied to clipboard",
+      "copyReplyFail": "Could not copy — select the text manually",
+      "stopGeneration": "Stop generating",
+      "stopped": "Generation stopped",
+      "thinkingPlaceholder": "Thinking...",
+      "usageFooter": "Input {{prompt}} tokens · Output {{completion}} tokens · Total {{total}} tokens",
+      "usageFooterTitle": "Token usage for this response",
+      "quickPrompts": {
+        "q1": "What is a large language model?",
+        "q2": "Write a short Python snippet"
+      },
+      "replyStreaming": "(Streaming demo) Received: “{{snippet}}”\n\nIn production this would call the model API with “{{model}}” and key “{{key}}”.",
+      "replyNonStreaming": "(Non-streaming demo) {{model}} would answer your question. This UI is a placeholder—no real request was sent."
+    }
+  },
+  "admin": {
+    "brandTitle": "Super admin",
+    "backToConsole": "Back to console",
+    "navSection": "Admin",
+    "nav": {
+      "dashboard": "Dashboard",
+      "system": "System",
+      "agentLevels": "Agent tiers",
+      "packages": "Packages"
+    },
+    "dashboard": {
+      "cardUsers": "Total users",
+      "cardAgents": "Total agents",
+      "cardMonthRevenue": "Revenue this month (top-up + packages)",
+      "cardMonthTokens": "Token usage this month",
+      "cardMonthWithdraw": "Commission withdrawals this month",
+      "cardModelsTotal": "Models (total)",
+      "chartYearRevenueTitle": "Monthly revenue by year (top-up + packages)",
+      "chartYearTokensTitle": "Monthly token usage by year",
+      "chartYearWithdrawTitle": "Monthly commission withdrawals by year",
+      "chartYearSubtitle": "{{year}} · by month",
+      "top10UsersTitle": "Top 10 users by token usage",
+      "top3PackagesTitle": "Top 3 packages by purchase quantity",
+      "top3ModelsTitle": "Top 3 models by usage",
+      "emptyRank": "No data",
+      "loadFail": "Could not load dashboard"
+    },
+    "system": {
+      "colConfigKey": "Config key",
+      "colConfigValue": "Config value",
+      "colDescription": "Description",
+      "colCategory": "Category",
+      "colConfigId": "Config ID",
+      "colIsDeleted": "Deleted flag",
+      "deletedMarkYes": "Yes",
+      "deletedMarkNo": "No",
+      "colCreatedAt": "Created at",
+      "colUpdatedAt": "Updated at",
+      "colActions": "Actions",
+      "add": "Add",
+      "edit": "Edit",
+      "delete": "Delete",
+      "deleteConfirm": "Delete config \"{{key}}\"? This cannot be undone.",
+      "deleteOk": "Deleted",
+      "deleteFail": "Delete failed",
+      "deleteModalTitle": "Delete configuration",
+      "deleteModalConfirm": "Delete",
+      "modalTitle": "Edit entry",
+      "modalCreateTitle": "New configuration",
+      "modalCreateHint": "Enter key, value, and category. The config key must be unique.",
+      "modalHint": "Read-only fields from the API are shown above; edit description and value below.",
+      "save": "Save",
+      "submitCreate": "Create",
+      "cancel": "Cancel",
+      "closeModal": "Close",
+      "loadFail": "Could not load system configuration",
+      "saveOk": "Saved",
+      "saveFail": "Save failed",
+      "createOk": "Created",
+      "createFail": "Create failed",
+      "configKeyRequired": "Config key is required",
+      "markDeleted": "Mark as deleted",
+      "empty": "No configuration rows",
+      "clickToCopy": "Click to copy",
+      "copyOk": "Copied to clipboard",
+      "copyFail": "Copy failed — copy manually",
+      "formSelectPlaceholder": "Select…",
+      "fieldNonNegative": "{{field}} cannot be negative"
+    },
+    "agentLevels": {
+      "loadFail": "Could not load agent tiers",
+      "add": "Add",
+      "addDisabledHint": "Load the list first so fields are known",
+      "edit": "Edit",
+      "delete": "Delete",
+      "empty": "No data",
+      "colActions": "Actions",
+      "saveOk": "Saved",
+      "saveFail": "Save failed",
+      "createOk": "Created",
+      "createFail": "Create failed",
+      "createNeedField": "Fill at least one field",
+      "deleteOk": "Deleted",
+      "deleteFail": "Delete failed",
+      "deleteModalTitle": "Delete",
+      "deleteConfirm": "Delete “{{label}}”? This cannot be undone.",
+      "modalEditTitle": "Edit agent tier",
+      "modalCreateTitle": "New agent tier",
+      "modalCreateHint": "Field names follow the API; fill at least one value.",
+      "fieldRequired": "Please fill in {{field}}",
+      "field": {
+        "level": "Level",
+        "level_code": "Tier code",
+        "level_name": "Tier name",
+        "commission_rate": "Commission rate",
+        "sort_order": "Sort order",
+        "description": "Description",
+        "description_en": "Description (English)",
+        "price": "Price (CNY)",
+        "created_at": "Created at",
+        "updated_at": "Updated at",
+        "is_active": "Active",
+        "min_amount": "Minimum amount",
+        "max_amount": "Maximum amount"
+      }
+    },
+    "packageMgmt": {
+      "loadFail": "Could not load packages",
+      "add": "Add",
+      "addDisabledHint": "Load the list first so fields are known",
+      "edit": "Edit",
+      "delete": "Delete",
+      "empty": "No data",
+      "colActions": "Actions",
+      "saveOk": "Saved",
+      "saveFail": "Save failed",
+      "createOk": "Created",
+      "createFail": "Create failed",
+      "createNeedField": "Fill at least one field",
+      "deleteOk": "Deleted",
+      "deleteFail": "Delete failed",
+      "deleteModalTitle": "Delete",
+      "deleteConfirm": "Delete “{{label}}”? This cannot be undone.",
+      "modalEditTitle": "Edit package",
+      "modalCreateTitle": "New package",
+      "modalCreateHint": "Field names follow the API; fill at least one value.",
+      "fieldRequired": "Please fill in {{field}}",
+      "modelBinding": "Model binding",
+      "modelBindingModalTitle": "Package model binding",
+      "modelBindingModalSubtitle": "{{label}} (package ID {{id}})",
+      "modelBindingColActions": "Actions",
+      "modelBindingDetail": "Details",
+      "modelDetailTitle": "Model service details",
+      "modelBindingLoadListFail": "Could not load model services",
+      "modelBindingLoadBoundFail": "Could not load bound models",
+      "modelBindingDetailFail": "Could not load model details",
+      "modelBindingDetailNoId": "Missing model service id",
+      "modelBindingMissingModelName": "This row has no model name; cannot bind or unbind.",
+      "modelBindingRowHintBind": "Click to bind this model",
+      "modelBindingRowHintUnbind": "Click to remove binding",
+      "modelBindingRowHintAllModels": "This package uses all models; bind/unbind is not available here.",
+      "modelBindingConfirmButton": "OK",
+      "modelBindingBindConfirmTitle": "Bind model",
+      "modelBindingBindConfirmBody": "Bind this model to the package? ({{name}})",
+      "modelBindingBindOk": "Bound",
+      "modelBindingBindFail": "Bind failed",
+      "modelBindingUnbindConfirmTitle": "Remove binding",
+      "modelBindingUnbindConfirmBody": "Remove this model from the package? ({{name}})",
+      "modelBindingUnbindOk": "Binding removed",
+      "modelBindingUnbindFail": "Could not remove binding",
+      "modelBindingColumn": {
+        "id": "ID",
+        "name": "Name",
+        "provider": "Provider",
+        "status": "Status",
+        "description": "Description",
+        "created_at": "Created at",
+        "updated_at": "Updated at",
+        "is_publish": "Published",
+        "isPublish": "Published",
+        "litellm_model_id": "LiteLLM model ID",
+        "litellmModelId": "LiteLLM model ID",
+        "service_id": "Service ID",
+        "serviceId": "Service ID",
+        "model_name": "Model name",
+        "modelName": "Model name",
+        "max_context_length": "Max context length",
+        "maxContextLength": "Max context length",
+        "model_type": "Model type",
+        "modelType": "Model type",
+        "input_token_price": "Input token price",
+        "output_token_price": "Output token price"
+      },
+      "field": {
+        "package_code": "Package code",
+        "name": "Name",
+        "price": "Price",
+        "price_cny": "Price (CNY)",
+        "token_quota": "Token quota",
+        "description": "Description",
+        "is_active": "Active",
+        "created_at": "Created at",
+        "updated_at": "Updated at",
+        "sort_order": "Sort order",
+        "duration_days": "Duration (days)",
+        "package_type": "Package type",
+        "is_all_models": "All models",
+        "isAllModels": "All models",
+        "name_en": "English name",
+        "nameEn": "English name"
+      }
+    }
+  }
+}
