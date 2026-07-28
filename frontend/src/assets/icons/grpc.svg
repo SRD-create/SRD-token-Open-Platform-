@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <title>gRPC</title>
+  <path d="M12 2 4 6.5v11L12 22l8-4.5v-11L12 2Z" stroke="#24496d" stroke-width="1.2" stroke-linejoin="round" fill="#e8f4fc"/>
+  <path d="M12 8v8M8 10.5v3M16 10.5v3" stroke="#0aa5a8" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="12" cy="12" r="2" fill="#0aa5a8"/>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="MCP">
+  <title>Model Context Protocol</title>
+  <circle cx="6.5" cy="12" r="3" fill="#475569"/>
+  <circle cx="17.5" cy="12" r="3" fill="#475569"/>
+  <rect x="9.5" y="10.25" width="5" height="3.5" rx="1" fill="#64748B"/>
+</svg>
