@@ -1,0 +1,503 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  /** 应用内自定义滚动条（与主题紫 accent 协调） */
+  --app-scrollbar-size: 8px;
+  --app-scrollbar-track: rgba(255, 255, 255, 0.06);
+  --app-scrollbar-thumb: rgba(255, 255, 255, 0.22);
+  --app-scrollbar-thumb-hover: rgba(167, 139, 250, 0.42);
+  --app-scrollbar-thumb-active: rgba(139, 92, 246, 0.52);
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  @apply bg-surface-950 text-zinc-100 antialiased;
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% -30%, rgba(99, 102, 241, 0.18), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(39, 39, 42, 0.9), transparent);
+}
+
+#root {
+  min-height: 100%;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+/**
+ * 控制台 / 管理端：锁住视口高度并禁止 html/body 纵向滚动，避免出现「整页滚进空白」的双滚动条；
+ * 各页只在内部可滚动容器里滚。由 AppShell / AdminShell 挂载时给 html 加类，卸载时移除。
+ */
+html.shell-viewport-lock {
+  overflow: hidden;
+  height: 100dvh;
+  max-height: 100dvh;
+}
+
+html.shell-viewport-lock body {
+  overflow: hidden;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+}
+
+html.shell-viewport-lock #root {
+  overflow: hidden;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+}
+
+/**
+ * 文档 `/docs/*`：锁住 html/body 纵向滚动，避免 Windows 下整页滚动条与 `#docs-main` 抢滚轮、进入页时闪动。
+ * 由 `DocsLayout` 挂载时给 `html` 加类，卸载移除（与控制台 `shell-viewport-lock` 互斥使用场景不同）。
+ */
+html.docs-viewport-lock,
+html.docs-viewport-lock body {
+  overflow: hidden;
+  height: 100%;
+  max-height: 100%;
+}
+
+html.docs-viewport-lock #root {
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/**
+ * 深色面板滚动条：控制台、文档、聊天、管理端表格等共用同一套视觉（WebKit + Firefox）。
+ * `html.landing-scroll-surface`：落地页（首页 / 模型广场 / 加盟 / 联系等）用整页滚动时，根滚动条与 Mac/Windows 内嵌区域一致。
+ * `.scrollbar-admin-table` 仅额外保留 `scrollbar-gutter`，避免表格区布局随滚动条显隐跳动。
+ */
+@layer components {
+  .scrollbar-surface,
+  .scrollbar-admin-table,
+  html.landing-scroll-surface,
+  html.landing-scroll-surface body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--app-scrollbar-thumb) var(--app-scrollbar-track);
+  }
+
+  .scrollbar-admin-table {
+    scrollbar-gutter: stable;
+  }
+
+  .scrollbar-surface::-webkit-scrollbar,
+  .scrollbar-admin-table::-webkit-scrollbar,
+  html.landing-scroll-surface::-webkit-scrollbar,
+  html.landing-scroll-surface body::-webkit-scrollbar {
+    width: var(--app-scrollbar-size);
+    height: var(--app-scrollbar-size);
+  }
+
+  .scrollbar-surface::-webkit-scrollbar-track,
+  .scrollbar-admin-table::-webkit-scrollbar-track,
+  html.landing-scroll-surface::-webkit-scrollbar-track,
+  html.landing-scroll-surface body::-webkit-scrollbar-track {
+    margin: 2px;
+    background: var(--app-scrollbar-track);
+    border-radius: 9999px;
+  }
+
+  .scrollbar-surface::-webkit-scrollbar-thumb,
+  .scrollbar-admin-table::-webkit-scrollbar-thumb,
+  html.landing-scroll-surface::-webkit-scrollbar-thumb,
+  html.landing-scroll-surface body::-webkit-scrollbar-thumb {
+    border: 2px solid transparent;
+    border-radius: 9999px;
+    background-clip: padding-box;
+    background-color: var(--app-scrollbar-thumb);
+  }
+
+  .scrollbar-surface::-webkit-scrollbar-thumb:hover,
+  .scrollbar-admin-table::-webkit-scrollbar-thumb:hover,
+  html.landing-scroll-surface::-webkit-scrollbar-thumb:hover,
+  html.landing-scroll-surface body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--app-scrollbar-thumb-hover);
+  }
+
+  .scrollbar-surface::-webkit-scrollbar-thumb:active,
+  .scrollbar-admin-table::-webkit-scrollbar-thumb:active,
+  html.landing-scroll-surface::-webkit-scrollbar-thumb:active,
+  html.landing-scroll-surface body::-webkit-scrollbar-thumb:active {
+    background-color: var(--app-scrollbar-thumb-active);
+  }
+
+  .scrollbar-surface::-webkit-scrollbar-corner,
+  .scrollbar-admin-table::-webkit-scrollbar-corner,
+  html.landing-scroll-surface::-webkit-scrollbar-corner,
+  html.landing-scroll-surface body::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
+
+/* API keys — 套餐卡片：紫 / 青 / 品红光斑 + 大面积渐变缓慢位移，形成流动感 */
+@keyframes api-keys-card-blob-violet {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  35% {
+    transform: translate(18%, 14%) scale(1.14);
+  }
+  68% {
+    transform: translate(-12%, 20%) scale(0.9);
+  }
+}
+
+@keyframes api-keys-card-blob-cyan {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1.02);
+  }
+  42% {
+    transform: translate(-20%, -12%) scale(1.1);
+  }
+  74% {
+    transform: translate(10%, 8%) scale(0.88);
+  }
+}
+
+@keyframes api-keys-card-blob-fuchsia {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(22%, -18%) scale(1.12);
+  }
+}
+
+@keyframes api-keys-card-mesh-flow {
+  0% {
+    background-position: 10% 30%;
+  }
+  50% {
+    background-position: 90% 70%;
+  }
+  100% {
+    background-position: 10% 30%;
+  }
+}
+
+@keyframes api-keys-card-sheen {
+  0%,
+  100% {
+    opacity: 0.48;
+  }
+  50% {
+    opacity: 0.72;
+  }
+}
+
+.api-keys-package-card-flow-violet {
+  animation: api-keys-card-blob-violet 17s ease-in-out infinite;
+}
+
+.api-keys-package-card-flow-cyan {
+  animation: api-keys-card-blob-cyan 20s ease-in-out infinite;
+}
+
+.api-keys-package-card-flow-fuchsia {
+  animation: api-keys-card-blob-fuchsia 14s ease-in-out infinite;
+}
+
+.api-keys-package-card-mesh {
+  position: absolute;
+  pointer-events: none;
+  inset: -40%;
+  opacity: 0.38;
+  background: linear-gradient(
+    122deg,
+    rgba(139, 92, 246, 0.3) 0%,
+    rgba(217, 70, 239, 0.14) 34%,
+    rgba(6, 182, 212, 0.2) 62%,
+    rgba(109, 40, 217, 0.26) 100%
+  );
+  background-size: 200% 200%;
+  animation: api-keys-card-mesh-flow 24s ease-in-out infinite;
+}
+
+.api-keys-package-card-sheen {
+  animation: api-keys-card-sheen 11s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .api-keys-package-card-flow-violet,
+  .api-keys-package-card-flow-cyan,
+  .api-keys-package-card-flow-fuchsia,
+  .api-keys-package-card-mesh,
+  .api-keys-package-card-sheen {
+    animation: none;
+  }
+
+  .api-keys-package-card-mesh {
+    background-position: 50% 50%;
+    opacity: 0.32;
+  }
+}
+
+/* Skeleton pulse */
+@keyframes skeleton-pulse {
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.animate-skeleton {
+  animation: skeleton-pulse 1.4s ease-in-out infinite;
+}
+
+/* AI 会话 — 空态欢迎区首次进入 */
+@keyframes ai-chat-empty-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ai-chat-empty-enter {
+  animation: ai-chat-empty-enter 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-chat-empty-enter {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Home hero — 「探索模型」旁三点跳动（CSS 避免与父级 Framer variants 的 y 合成冲突，刷新后仍持续） */
+@keyframes home-cta-dot-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.home-cta-dot-bounce {
+  animation: home-cta-dot-bounce 0.55s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.home-cta-dot-bounce-delay-1 {
+  animation-delay: 0.12s;
+}
+
+.home-cta-dot-bounce-delay-2 {
+  animation-delay: 0.24s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-cta-dot-bounce {
+    animation: none;
+  }
+}
+
+/* AI 会话 — 助手等待回复：三点错落跳动 */
+@keyframes ai-chat-typing-dot-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+
+.ai-chat-typing-dot {
+  animation: ai-chat-typing-dot-bounce 0.85s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.ai-chat-typing-dot-delay {
+  animation-delay: 0.14s;
+}
+
+.ai-chat-typing-dot-delay-2 {
+  animation-delay: 0.28s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-chat-typing-dot {
+    animation: none;
+    opacity: 0.7;
+  }
+}
+
+/* Login page — animated backdrop */
+@keyframes login-grid-drift {
+  0% {
+    background-position:
+      0 0,
+      0 0;
+  }
+  100% {
+    background-position:
+      56px 56px,
+      56px 56px;
+  }
+}
+
+.login-backdrop-grid {
+  background-image:
+    linear-gradient(rgba(165, 180, 252, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(165, 180, 252, 0.09) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 78% 62% at 50% 42%, black 18%, transparent 74%);
+  -webkit-mask-image: radial-gradient(ellipse 78% 62% at 50% 42%, black 18%, transparent 74%);
+  animation: login-grid-drift 24s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .login-backdrop-grid {
+    animation: none;
+  }
+}
+
+/* Model square — Web3-style drifting tech grid */
+@keyframes model-square-grid-drift {
+  0% {
+    background-position:
+      0 0,
+      0 0;
+  }
+  100% {
+    background-position:
+      44px 44px,
+      44px 44px;
+  }
+}
+
+.model-square-backdrop-grid {
+  background-image:
+    linear-gradient(rgba(34, 211, 238, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.045) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 85% 70% at 50% 45%, black 22%, transparent 72%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 70% at 50% 45%, black 22%, transparent 72%);
+  animation: model-square-grid-drift 36s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .model-square-backdrop-grid {
+    animation: none;
+  }
+}
+
+/* Home — animated aurora blobs + tech grid */
+@keyframes home-backdrop-grid-drift {
+  0% {
+    background-position:
+      0 0,
+      0 0;
+  }
+  100% {
+    background-position:
+      48px 48px,
+      48px 48px;
+  }
+}
+
+.home-backdrop-grid {
+  background-image:
+    linear-gradient(rgba(129, 140, 248, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(167, 139, 250, 0.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 92% 68% at 50% 32%, black 12%, transparent 72%);
+  -webkit-mask-image: radial-gradient(ellipse 92% 68% at 50% 32%, black 12%, transparent 72%);
+  animation: home-backdrop-grid-drift 52s linear infinite;
+}
+
+@keyframes home-aurora-blob-1 {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translate3d(4vw, 6vh, 0) scale(1.08);
+    opacity: 1;
+  }
+}
+
+@keyframes home-aurora-blob-2 {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.75;
+  }
+  50% {
+    transform: translate3d(-5vw, 8vh, 0) scale(1.12);
+    opacity: 0.95;
+  }
+}
+
+@keyframes home-aurora-blob-3 {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1.02);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate3d(-3vw, -5vh, 0) scale(1.06);
+    opacity: 0.9;
+  }
+}
+
+.home-aurora-blob {
+  will-change: transform;
+}
+
+.home-aurora-blob-1 {
+  animation: home-aurora-blob-1 26s ease-in-out infinite alternate;
+}
+
+.home-aurora-blob-2 {
+  animation: home-aurora-blob-2 32s ease-in-out infinite alternate;
+}
+
+.home-aurora-blob-3 {
+  animation: home-aurora-blob-3 38s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-backdrop-grid {
+    animation: none;
+  }
+
+  .home-aurora-blob-1,
+  .home-aurora-blob-2,
+  .home-aurora-blob-3 {
+    animation: none;
+  }
+}
