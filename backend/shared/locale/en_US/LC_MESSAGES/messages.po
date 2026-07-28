@@ -1,0 +1,82 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: aitoken_platform_backend\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-16 09:00+0000\n"
+"PO-Revision-Date: 2026-04-16 09:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: English\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "套餐不存在"
+msgstr "Package not found"
+
+msgid "无效的支付方式"
+msgstr "Invalid payment method"
+
+msgid "微信支付创建失败: {res}"
+msgstr "WeChat payment creation failed: {res}"
+
+msgid "套餐订单创建成功，请扫码支付"
+msgstr "Package order created successfully, please scan to pay"
+
+msgid "微信支付创建失败: {e}"
+msgstr "WeChat payment creation failed: {e}"
+
+msgid "套餐订单创建成功"
+msgstr "Package order created successfully"
+
+msgid "用户账户不存在"
+msgstr "User account not found"
+
+msgid "充值订单创建成功，请扫码支付"
+msgstr "Recharge order created successfully, please scan to pay"
+
+msgid "充值订单创建成功"
+msgstr "Recharge order created successfully"
+
+msgid "代理等级不存在"
+msgstr "Agent level not found"
+
+msgid "代理商注册订单创建成功，请扫码支付"
+msgstr "Agent registration order created successfully, please scan to pay"
+
+msgid "代理商注册订单创建成功"
+msgstr "Agent registration order created successfully"
+
+msgid "用户不存在"
+msgstr "User not found"
+
+msgid "您已经绑定过邀请人了"
+msgstr "You have already bound an inviter"
+
+msgid "不能绑定自己的邀请码"
+msgstr "Cannot bind your own invite code"
+
+msgid "邀请码无效"
+msgstr "Invalid invite code"
+
+msgid "邀请码绑定成功"
+msgstr "Invite code bound successfully"
+
+msgid "订单不存在"
+msgstr "Order not found"
+
+msgid "您没有权限为此订单支付"
+msgstr "You don't have permission to pay for this order"
+
+msgid "订单已经支付"
+msgstr "Order has already been paid"
+
+msgid "微信支付二维码生成成功"
+msgstr "WeChat payment QR code generated successfully"
+
+msgid "WeChat API error: %s"
+msgstr "WeChat API error: %s"
+
+msgid "登录成功"
+msgstr "Login successful"
